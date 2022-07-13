@@ -1,0 +1,23 @@
+
+.nav-link {
+  position: fixed !important;
+  top: 1px;
+  color: rgb(255, 0, 0);
+  margin: 5px;
+}
+
+.userBox {
+  color: blue;
+  margin: 10px;
+}
+
+.Lorem {
+  display: block;
+  background-color: rgb(244, 244, 238);
+  padding: 10px;
+  margin: 25px 5px;
+  font-size: 30px;
+  border: 1px solid rgb(208, 208, 254);
+  border-radius: 20px;
+  box-shadow: 7px 10px 3px rgb(44, 44, 44);
+}
