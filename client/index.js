@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import App from "./React/App";
 
-import "./React/Css/nav.css";
+import "./style.scss";
 
 
 ReactDOM.render(<App />, document.querySelector('#root'));

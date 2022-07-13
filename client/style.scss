@@ -1,8 +1,11 @@
 
-.nav-link {
-  position: fixed !important;
-  top: 1px;
-  color: rgb(255, 0, 0);
+
+
+.nav {
+  position: sticky !important;
+  top: 0px;
+  width: auto;
+  background-color: rgb(238, 161, 161);
   margin: 5px;
 }
 

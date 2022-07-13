@@ -7,8 +7,11 @@ const NavBar = props => {
   return (
     <> 
       <Nav>
-        <Nav.Link to="/">Home</Nav.Link>
-        <Nav.Link to="/login">Login</Nav.Link>
+        <Nav.Link className="home" to="/">Home</Nav.Link>
+        <Nav.Link classNamee="tracker" to="/tracker">Project Tracker</Nav.Link>
+        <Nav.Link classNamee="page2" to="/">Page 2</Nav.Link>
+        <Nav.Link classNamee="page3" to="/">Page 3</Nav.Link>
+        <Nav.Link classNamee="login" to="/login">Login</Nav.Link>
       </Nav>
     </>
   )
