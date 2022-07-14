@@ -1,0 +1,49 @@
+const bcrypt = require('bcrypt');
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.status(201).json({message: 'Account router'});
+});
+
+router.get('/signup:', (req, res) => {
+  const {username, password} = req.body;
+  console.log('signup ', username, password);
+  // const {username, password} = req.query;
+
+  // bcrypt.hash(password, 16)
+  // .then((hashed) => {
+  //   console.log(hashed);
+  //   res.status(200).send({
+  //     'password': hashed,
+  //   })
+  // })
+  // .catch ((err) => {
+  //   console.log(err);
+  // })
+
+});
+
+module.exports = router;
+
+
+// const data = JSON.stringify({
+//     "collection": "<COLLECTION_NAME>",
+//     "database": "<DATABASE_NAME>",
+//     "dataSource": "Cluster0",
+//     "projection": {
+//         "_id": 1
+//     }
+// });
+
+// const config = {
+//     method: 'post',
+//     url: 'https://data.mongodb-api.com/app/data-sewec/endpoint/data/v1/action/findOne',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Access-Control-Request-Headers': '*',
+//       'api-key': 'BtZ7oLf7FQtBBSQFzlEj11lkFPzuvH8vfSFXZny1wvPfytjbdiuOSHBs5YBbqtpF',
+//     },
+//     data: data
+// };
+

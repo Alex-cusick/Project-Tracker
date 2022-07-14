@@ -4,6 +4,7 @@
   "description": "Project Tracker Testing",
   "main": "/client/index.js",
   "scripts": {
+    "server": "nodemon server/server.js",
     "start": "NODE_ENV=production node server/server.js",
     "build": "webpack",
     "dev": "concurrently \"npm start\" \"NODE_ENV=development webpack serve --open\""
@@ -13,6 +14,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "mongoose": "^6.4.4",
