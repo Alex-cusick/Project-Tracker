@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-const Register = () => {
+const Register = props => {
 
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
@@ -18,7 +18,7 @@ const Register = () => {
   }
 
   useEffect(() => {
-    document.title = 'Login for: ' + user;
+    document.title = 'Registration';
   });
 
   return (

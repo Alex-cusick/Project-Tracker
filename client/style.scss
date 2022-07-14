@@ -1,12 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Bungee+Inline:regular);
+@import url(https://fonts.googleapis.com/css?family=Bungee+Outline:regular);
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One:regular);
 
+$off-white: #D4F7EC;
+$green: #00D18F;
+$light: #1C5CD4;
+$mid: #2727EC;
+$dark: #090934;
 
+$orange: rgb(252, 203, 79);
+$violet: hsla(288, 75%, 21%, 1);
+$dark-violet: hsla(273, 65%, 16%, 1);
+$rose: hsla(336, 97%, 60%, 1);
+$neon-pink: hsla(295, 100%, 48%, 1);
+$cyan: #00FCFC;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $dark-violet;
+}
+
+.App-title {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Bungee Outline';
+  font-size: 40px;
+}
 
 .nav {
+  
   position: sticky !important;
   top: 0px;
-  width: auto;
-  background-color: rgb(238, 161, 161);
-  margin: 5px;
+  width: 90%;
+  height: 35px;
+  background-color: rgb(35, 240, 255);
+  // box-shadow: 0px 0px 60px 7px rgb(215, 34, 222);
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition-duration: .8s;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #00FCFC;
+    box-shadow: 0px 0px 20px 10px #68ffff;
+  }
+
+  .nav-link {
+    background-color: rgb(213, 0, 192);
+    height: 14px;
+    margin: 5px;
+    padding: 0px 3px 4px 3px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(216, 9, 161);
+    z-index: 100;
+
+    color: rgb(0, 27, 160);
+    font-size: larger;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    
+    transition-duration: 0.4s;
+    &:hover {
+      background-color: rgb(45, 35, 244);
+      box-shadow: 0px 0px 5px 5px rgb(101, 43, 249);
+      color: #D4F7EC;
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav::after {
+  box-shadow: 0px 0px 60px 7px rgb(215, 34, 222),
+  0px 0px 30px 3px rgb(215, 34, 222);
+  content: " ";
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  width: 100%;
+  z-index: -100;
 }
 
 .userBox {
@@ -16,11 +94,31 @@
 
 .Lorem {
   display: block;
-  background-color: rgb(244, 244, 238);
+  background-color: $violet;
   padding: 10px;
-  margin: 25px 5px;
+  margin: 25px 20px;
   font-size: 30px;
+  font-family: 'Fjalla One';
+  color: #91eeff;
   border: 1px solid rgb(208, 208, 254);
   border-radius: 20px;
-  box-shadow: 7px 10px 3px rgb(44, 44, 44);
+  box-shadow: 7px 10px 3px rgb(255, 0, 0);
+}
+
+.error-container {
+  color: #68ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-decoration: underline;
+    font-size: 40px;
+    font-family: Orbitron;
+  }
+  
+  p {
+    font-size: larger;
+    font-family: 'Bungee Inline';
+  }
 }

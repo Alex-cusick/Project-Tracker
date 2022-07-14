@@ -1,18 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Nav, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavBar = props => {
 
   return (
     <> 
-      <Nav>
-        <Nav.Link className="home" to="/">Home</Nav.Link>
-        <Nav.Link classNamee="tracker" to="/tracker">Project Tracker</Nav.Link>
-        <Nav.Link classNamee="page2" to="/">Page 2</Nav.Link>
-        <Nav.Link classNamee="page3" to="/">Page 3</Nav.Link>
-        <Nav.Link classNamee="login" to="/login">Login</Nav.Link>
-      </Nav>
+      <div className="nav">
+        {/* <div className="logo">Q6</div> */}
+        <Link className="home nav-link" to="/">Home</Link>
+        <Link className="tracker nav-link" to="/tracker">Project Tracker</Link>
+        <Link className="page2 nav-link" to="/content">Page 2</Link>
+        <Link className="page3 nav-link" to="/spongebob">Page 3</Link>
+        <Link className="login nav-link" to="/login">Login</Link>
+      </div>
     </>
   )
 }
