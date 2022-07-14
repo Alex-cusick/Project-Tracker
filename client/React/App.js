@@ -4,6 +4,7 @@ import Login from './Login.js';
 import Register from './Register.js';
 import Content from './Content.js';
 import Error from './Error.js';
+import Tracker from './Tracker.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
       < NavBar />
       < Routes >
         < Route path="/register" element={< Register />}/>
+        < Route path="/tracker" element={< Tracker />}/>
         < Route path="/login" element={< Login />}/>
         < Route path="/content" element={< Content />}/>
         < Route path="*" element={< Error />}/>
