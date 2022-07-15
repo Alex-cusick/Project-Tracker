@@ -1,15 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 
 const Tracker = props => {
 
-  const projectContainers = [];
+  const [projectContainer, setProjects] = useState([]);
 
-  componentDidMount() {
-    
-  }
+  useEffect(() => {
+    fetch('http://localhost:3000/api/project', {mode:'cors'})
+    .then( response => response.json())
+    .then( data => {
+      const arr = [];
+      for (const ele of data) {
+        console.log(ele);
+        const {_id, title, status, body, createdAt} = ele;
+        arr.push(<Project key={_id} title={title} status={status} body={body} createdAt={createdAt}/>);
+      }
+      setProjects(arr);
+    })
+    .catch( err => console.error(err) )
+  }, []);
   
   return (
-    <div>
+    <div className='allProjects'>
+      {projectContainer}
+    </div>
+  )
+}
+
+const Project = props => {
+  return (
+    <div className='projectContainer'>
+      <h2>{props.title}</h2>
+      <div>Status: {props.status}</div>
+      <div>Details: {props.body}</div>
+      <div>Created: {props.createdAt}</div>
     </div>
   )
 }

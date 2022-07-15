@@ -17,6 +17,7 @@ const App = () => (
         < Route path="/tracker" element={< Tracker />}/>
         < Route path="/login" element={< Login />}/>
         < Route path="/content" element={< Content />}/>
+        < Route path="/" element={<h1 className='homepage'>HomePage</h1>}/>
         < Route path="*" element={< Error />}/>
       </ Routes >
     </ BrowserRouter >

@@ -11,7 +11,7 @@ const NavBar = props => {
         <Link className="home nav-link" to="/">Home</Link>
         <Link className="tracker nav-link" to="/tracker">Project Tracker</Link>
         <Link className="page2 nav-link" to="/content">Page 2</Link>
-        <Link className="page3 nav-link" to="/spongebob">Page 3</Link>
+        <Link className="page3 nav-link" to="/spongebob">HH Solutions</Link>
         <Link className="login nav-link" to="/login">Login</Link>
       </div>
     </>

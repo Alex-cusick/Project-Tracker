@@ -7,7 +7,7 @@
     "server": "nodemon server/server.js",
     "start": "NODE_ENV=production node server/server.js",
     "build": "webpack",
-    "dev": "concurrently \"npm start\" \"NODE_ENV=development webpack serve --open\""
+    "dev": "concurrently \"npm run server\" \"NODE_ENV=development webpack serve --open\""
   },
   "author": "Alex_cusick",
   "license": "ISC",

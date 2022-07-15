@@ -12,7 +12,7 @@ $dark: #090934;
 
 $orange: rgb(252, 203, 79);
 $violet: hsla(288, 75%, 21%, 1);
-$dark-violet: hsla(273, 65%, 16%, 1);
+$dark-violet: rgb(29, 2, 52);
 $rose: hsla(336, 97%, 60%, 1);
 $neon-pink: hsla(295, 100%, 48%, 1);
 $cyan: #00FCFC;
@@ -20,7 +20,7 @@ $cyan: #00FCFC;
 body {
   margin: 0;
   padding: 0;
-  background-color: $dark-violet;
+  background-color: rgb(23, 11, 34);
 }
 
 .App-title {
@@ -44,10 +44,19 @@ body {
   align-items: center;
   transition-duration: .8s;
   border-radius: 10px;
-
+  animation: glow 1s ease-in infinite alternate;
   &:hover {
     background-color: #00FCFC;
     box-shadow: 0px 0px 20px 10px #68ffff;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px 0px #68ffff;
+    }
+    to {
+      box-shadow: 0 0 20px 10px #68ffff;
+    }
   }
 
   .nav-link {
@@ -87,9 +96,33 @@ body {
   z-index: -100;
 }
 
+.homepage {
+  color: rgb(0, 242, 255);
+  font-family: 'Bungee Inline';
+  font-size: 200px;
+  text-align: center;
+}
+
 .userBox {
   color: blue;
   margin: 10px;
+}
+
+.allProjects {
+  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-items: center;
+  & div {
+    background-color: #68ffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 30px 4px rgb(215, 34, 222);
+    & * {
+      font-family: 'Fjalla One';
+    }
+  }
 }
 
 .Lorem {
@@ -103,6 +136,15 @@ body {
   border: 1px solid rgb(208, 208, 254);
   border-radius: 20px;
   box-shadow: 7px 10px 3px rgb(255, 0, 0);
+}
+
+.loginContainer {
+  background-color: #68ffff;
+  width: 40%;
+  margin: auto;
+  margin-top: 60px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .error-container {
