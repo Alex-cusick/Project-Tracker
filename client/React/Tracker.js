@@ -5,7 +5,7 @@ const Tracker = props => {
   const [projectContainer, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/project', {mode:'cors'})
+    fetch('http://localhost:3000/NavBar/project', {mode:'cors'})
     .then( response => response.json())
     .then( data => {
       const arr = [];
